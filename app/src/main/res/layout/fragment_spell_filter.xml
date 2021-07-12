@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:orientation="vertical"
+    tools:context=".ui.spells.pages.SpellFilterFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingTop="@android:dimen/app_icon_size"
+                android:text="@string/class_filter"
+                android:textColor="@color/color_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tVClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableEnd="@android:drawable/arrow_down_float"
+                android:gravity="center"
+                android:includeFontPadding="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/color_line" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/level_filter"
+                android:textColor="@color/color_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/pading">
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:gravity="center|center_vertical">
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxLevel0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="0"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+
+                        android:id="@+id/chBoxLevel1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="1"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxLevel2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="2"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxLevel3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="3"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxLevel4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="4"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|center_horizontal|fill_vertical"
+                    android:gravity="center|center_horizontal|center_vertical">
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxLevel5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="5"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxLevel6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="6"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxLevel7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="7"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxLevel8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="8"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxLevel9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="9"
+                        android:textColor="@color/design_default_color_on_secondary" />
+                </TableRow>
+            </TableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/color_line" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/chool_filter"
+                android:textColor="@color/color_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|center_horizontal|fill_vertical"
+                    android:gravity="center|center_horizontal|center_vertical">
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxSchool1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+
+                        android:text=""
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxSchool2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text=""
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxSchool3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text=""
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|center_horizontal|fill_vertical"
+                    android:gravity="center|center_horizontal|center_vertical">
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxSchool4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="5"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxSchool5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="5"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|center_horizontal|fill_vertical"
+                    android:gravity="center|center_horizontal|center_vertical">
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxSchool6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="5"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxSchool7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="5"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxSchool8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="5"
+                        android:textColor="@color/design_default_color_on_secondary" />
+                </TableRow>
+            </TableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/color_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bttnReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/color_text"
+                    android:text="@string/reset_filter"
+                    android:textColor="@color/cardview_light_background" />
+
+                <Button
+                    android:id="@+id/bttnAccept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/color_text"
+                    android:text="@string/accept_filter"
+                    android:textColor="@color/cardview_light_background" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/color_line" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/source_filter"
+                android:textColor="@color/color_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|center_horizontal|fill_vertical"
+                    android:gravity="center|center_horizontal|center_vertical">
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxSource1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="5"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxSource2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="5"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxSource3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="5"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxSource4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="5"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|center_horizontal|fill_vertical"
+                    android:gravity="center|center_horizontal|center_vertical">
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxSource5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="5"
+                        android:textColor="@color/design_default_color_on_secondary" />
+
+                    <com.example.halperdnd.view.CheckButtonBig
+                        android:id="@+id/chBoxSource6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_btn_big_choose"
+                        android:backgroundTint="@color/button_roll_selector"
+                        android:text="5"
+                        android:textColor="@color/design_default_color_on_secondary" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:background="#7b7b7b" />
+
+
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_equipment">
+
+    <fragment
+        android:id="@+id/nav_equipment"
+        android:label="@string/equipment"
+        android:name="com.example.halperdnd.ui.equipmentTables.equipmentNavigation.EquipmentTableListFragment"
+        tools:layout="@layout/fragment_equipment_table_list" >
+        <action
+            android:id="@+id/action_nav_equipment_table_list_to_addEquipmentFragment"
+            app:destination="@id/addEquipmentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEquipmentFragment"
+        android:name="com.example.halperdnd.ui.equipmentTables.equipmentNavigation.AddEquipmentFragment"
+        android:label="@string/lebel_add_equipment"
+        tools:layout="@layout/fragment_add_equipment" />
+
+    <fragment
+        android:id="@+id/nav_table"
+        android:name="com.example.halperdnd.ui.simpletables.SimpleTableFragment"
+        android:label="@string/tables"
+        tools:layout="@layout/fragment_simple_table" />
+
+    <fragment
+        android:id="@+id/nav_spells"
+        android:name="com.example.halperdnd.ui.spells.SpellsTableFragment"
+        android:label="@string/label_list_spell"
+        tools:layout="@layout/fragment_spells">
+        <action
+            android:id="@+id/action_nav_spells_to_spellsDescriptionFragment"
+            app:destination="@+id/nav_spellsDescription"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@+id/nav_spells">
+            <argument
+                android:name="spell"
+                android:defaultValue="null" />
+        </action>
+        <action
+            android:id="@+id/action_nav_spells_to_spellFilterFragment"
+            app:destination="@id/navSpellFilterFragment"
+            app:popUpTo="@+id/nav_spells"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_spellsDescription"
+        android:name="com.example.halperdnd.ui.spells.pages.SpellsDescriptionFragment"
+        android:label="@string/label_spell_description"
+        tools:layout="@layout/fragment_spells_discription">
+        <argument
+            android:name="spellName"
+            android:defaultValue="-"
+            app:argType="string" />
+        <argument
+            android:name="spellDescription"
+            android:defaultValue="description"
+            app:argType="string" />
+        <argument
+            android:name="spellLevel"
+            android:defaultValue="level"
+            app:argType="string" />
+        <argument
+            android:name="spellMatComponent"
+            android:defaultValue="duration"
+            app:argType="string" />
+        <argument
+            android:name="spellComponents"
+            android:defaultValue="spell"
+            app:argType="string" />
+        <argument
+            android:name="spellSchool"
+            android:defaultValue="duration"
+            app:argType="string" />
+        <argument
+            android:name="spellTimeCast"
+            android:defaultValue="duration"
+            app:argType="string" />
+        <argument
+            android:name="spellDistance"
+            android:defaultValue="distance"
+            app:argType="string" />
+        <argument
+            android:name="spellDuration"
+            android:defaultValue="duration"
+
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/navSpellFilterFragment"
+        android:name="com.example.halperdnd.ui.spells.pages.SpellFilterFragment"
+        android:label="@string/label_filter"
+        tools:layout="@layout/fragment_spell_filter" />
+    <fragment
+        android:id="@+id/nav_market"
+        android:name="com.example.halperdnd.ui.tools.EquipmentTableMarketFragment"
+        android:label="@string/label_market_generation"
+        tools:layout="@layout/fragment_equipment_table_market">
+
+        <action
+            android:id="@+id/action_nav_market_to_sendFragment"
+            app:destination="@id/sendFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendFragment"
+        android:name="com.example.halperdnd.ui.tools.SendFragment"
+        android:label="Список товаров в магазине" />
+
+
+</navigation>

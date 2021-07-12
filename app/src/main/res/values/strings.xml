@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">HalperDnD</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Переслать</string>
+    <string name="nav_menu">Меню</string>
+    <string name="roll">Roll</string>
+    <string name="tables">Таблицы</string>
+
+    <string name="st_spell_distance">Дистанция</string>
+    <string name="st_spell_component">Компоненты</string>
+    <string name="st_spell_duration">Длительность</string>
+    <string name="st_spell_cast">Время накладования</string>
+    <string name="st_spell_mat_component">Метериальные компоненты:</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="equipment">Снаряжение</string>
+    <string name="market_equipment">Товар у торговца</string>
+
+    <string name="class_filter">Клас</string>
+    <string name="level_filter">Уровень</string>
+    <string name="chool_filter">Школа</string>
+    <string name="source_filter">Источник</string>
+    <string name="accept_filter">Применить</string>
+    <string name="reset_filter">Сбросить</string>
+    <string name="switch_homebrew">HomeBrew товари</string>
+    <string name="switch_roll_market">Случайный магазин</string>
+    <string name="hint_market_name">Назва магазина*</string>
+    <string name="tV_market_namber_equpment">Количество товару</string>
+    <string name="delete">удалить</string>
+    <string name="menu_market">Генератор магазина</string>
+    <string name="roll_market_btn">Добавить магазин</string>
+    <string name="lebel_add_equipment">Добавить снаряжение</string>
+    <string name="label_list_spell">Списоок заклинаний</string>
+    <string name="label_filter">Настройка фильтра</string>
+    <string name="label_spell_description">Описание заклинания</string>
+    <string name="label_market_generation">Генератор магазина</string>
+    <string name="share">Поделиться</string>
+</resources>

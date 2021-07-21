@@ -38,34 +38,37 @@ public class SimpleTableFragment extends Fragment {
         super(R.layout.layout_recycle_simple_table);
     }
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_simple_table, container, false);
-        recyclerViewSimpleTable = root.findViewById(R.id.recyclerViewSimpleTable);
-
-        recyclerViewSimpleTable.setLayoutManager(new LinearLayoutManager(root.getContext()));
-
-        textViewRessult = root.findViewById(R.id.textViewRessult);
-        initRecyclerView();
-        return root;
-    }
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /**load database*/
         try {
             dataBaseHelper = new DataBaseHelper(getContext(),"simpleTables.db");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        /***/
         dataSimpleTable = dataBaseHelper.getDataResDao();
-
         simpleTableList = dataSimpleTable.loadSimpleTable();
         for(SimpleTable i : simpleTableList) {
             i.setElemetSimpleTableArrayList
                     (dataSimpleTable.loadSimpleTableElement(i.getTable_name_db()));
         }
     }
+
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        View root = inflater.inflate(R.layout.fragment_simple_table, container, false);
+        /**Initialization  recycleView*/
+        recyclerViewSimpleTable = root.findViewById(R.id.recyclerViewSimpleTable);
+        recyclerViewSimpleTable.setLayoutManager(new LinearLayoutManager(root.getContext()));
+        initRecyclerView();
+        /***/
+        textViewRessult = root.findViewById(R.id.textViewRessult);
+        return root;
+    }
+
+
 
     private void initRecyclerView() {
         adapterSimpleTable = new AdapterSimpleTable();

@@ -65,7 +65,7 @@ public class AdapterSimpleTable extends RecyclerView.Adapter<AdapterSimpleTable.
 
         private TextView textViewName;
         private Button bttnRoll;
-        private EditText rollingNumber;
+        private EditText eDRollingNumber;
         private SimpleTable simpleTable;
         private SimpleTableFragment simpleTableFragment;
 
@@ -73,8 +73,9 @@ public class AdapterSimpleTable extends RecyclerView.Adapter<AdapterSimpleTable.
             super(view);
             textViewName = view.findViewById(R.id.textViewTableName);
             bttnRoll = view.findViewById(R.id.bttnRoll);
-            rollingNumber = view.findViewById(R.id.editTextRollingNumber);
-            rollingNumber.setOnKeyListener(new View.OnKeyListener() {
+            /**on click listener for eDRollingNumber*/
+            eDRollingNumber = view.findViewById(R.id.editTextRollingNumber);
+            eDRollingNumber.setOnKeyListener(new View.OnKeyListener() {
                 public boolean onKey(View v, int keyCode, KeyEvent event) {
                     if (keyCode == KeyEvent.KEYCODE_ENTER) {
                         return true;
@@ -87,7 +88,8 @@ public class AdapterSimpleTable extends RecyclerView.Adapter<AdapterSimpleTable.
 
 
         public void bind(SimpleTable simpleTable, SimpleTableFragment simpleTableFragment) {
-            textViewName.setText(simpleTable.getTable_name());
+            textViewName.setText(
+                    simpleTable.getTable_name()+"(d"+simpleTable.getDice()+")");//set name and dice
             this.simpleTable = simpleTable;
             this.simpleTableFragment = simpleTableFragment;
         }
@@ -97,23 +99,30 @@ public class AdapterSimpleTable extends RecyclerView.Adapter<AdapterSimpleTable.
 
             switch (view.getId()) {
                 case R.id.bttnRoll:
+                    /**roll dices*/
                     int rollingDice = DiceRolling.diceRoll(simpleTable.getDice());
-                    String buff = rollingNumber.getText().toString();
-                    if (buff.isEmpty()) {
+                    String buff = eDRollingNumber.getText().toString();
+
+                    if (buff.isEmpty()) {//if buffer from eDRollingNumber is empty, get from arraylist
                         simpleTableFragment.getTextViewRessult().setText(
                                 rollingDice + "\n" +
                                         simpleTable.getRessult(rollingDice));
                     } else {
-                        if (Integer.valueOf(buff) >= 1 && Integer.valueOf(buff) <= 100) {
+                        /**get number from eDRollingNumber*/
+                        if (Integer.parseInt(buff) >= 1 && Integer.parseInt(buff) <= simpleTable.getDice()) {
                             simpleTableFragment.getTextViewRessult().setText(
                                     buff + "\n" +
                                             simpleTable.getRessult(
                                                     Integer.valueOf(buff)));
-                            rollingNumber.setText("");
+                            eDRollingNumber.setText("");
                         } else {
-                            Toast toast = Toast.makeText(simpleTableFragment.getContext(), "Не коректне значення", Toast.LENGTH_SHORT);
+                            /**if no correct number from eDRollingNumber*/
+                            Toast toast = Toast.makeText(
+                                    simpleTableFragment.getContext(),
+                                    "Не коректне значення",
+                                    Toast.LENGTH_SHORT);
                             toast.show();
-                            rollingNumber.setText("");
+                            eDRollingNumber.setText("");
                         }
                     }
                     break;

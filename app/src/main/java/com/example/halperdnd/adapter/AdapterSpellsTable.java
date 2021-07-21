@@ -144,8 +144,6 @@ public class AdapterSpellsTable extends RecyclerView.Adapter<AdapterSpellsTable.
             List<ElementSpellsTable> filteredListSecond = new ArrayList<>();
 
 
-
-
             if (constraint == null || constraint.length() == 0) {
                 filteredListFirst.addAll(spellsTableListFull);
             } else {

@@ -117,7 +117,7 @@ public class SpellsTableFragment extends Fragment implements View.OnClickListene
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_spells, container, false);
-        /**NAVcontroler*/
+        /**NAVController*/
         navController = NavHostFragment.findNavController(this);
         NavBackStackEntry backStackEntry = navController.getBackStackEntry(R.id.nav_spells);
         /**Create ViewModel (ClassData)*/

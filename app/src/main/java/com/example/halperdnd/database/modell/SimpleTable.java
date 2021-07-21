@@ -1,5 +1,7 @@
 package com.example.halperdnd.database.modell;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 
 public class SimpleTable {
@@ -20,7 +22,7 @@ public class SimpleTable {
     {
         for(ElemetSimpleTable i : elemetSimpleTableArrayList)
         {
-            if (i.getMin() >= ressDice &&
+            if (i.getMin() <= ressDice &&
                     ressDice <= i.getMax())
                 return i.getRessult();
         }

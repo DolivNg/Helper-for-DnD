@@ -61,6 +61,4 @@ public class SimpleTable {
     public void setTable_name_db(String table_name_db) {
         this.table_name_db = table_name_db;
     }
-
-
 }

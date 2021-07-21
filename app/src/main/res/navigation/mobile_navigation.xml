@@ -25,7 +25,11 @@
         android:id="@+id/nav_table"
         android:name="com.example.halperdnd.ui.simpletables.SimpleTableFragment"
         android:label="@string/tables"
-        tools:layout="@layout/fragment_simple_table" />
+        tools:layout="@layout/fragment_simple_table" >
+        <action
+            android:id="@+id/action_nav_table_to_elementSimpleTableFragment"
+            app:destination="@id/elementSimpleTableFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_spells"
@@ -113,6 +117,11 @@
         android:id="@+id/sendFragment"
         android:name="com.example.halperdnd.ui.tools.SendFragment"
         android:label="Список товаров в магазине" />
+    <fragment
+        android:id="@+id/elementSimpleTableFragment"
+        android:name="com.example.halperdnd.ElementSimpleTableFragment"
+        android:label="fragment_element_simple_table"
+        tools:layout="@layout/fragment_element_simple_table" />
 
 
 </navigation>
